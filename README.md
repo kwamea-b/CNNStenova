@@ -1,4 +1,6 @@
 # CNNStenova
+  <img src="CNNStenova_logo.png" width="500" align="right">
+
 
 CNNStenova is an interactive Streamlit educational and research tool for learning finite-difference stencils and PDE update operators as interpretable convolutional neural-network kernels.
 
