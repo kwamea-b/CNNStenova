@@ -61,7 +61,7 @@ def analytical_solution_diffusion_dirichlet(x, t, mu, L, bBC, tBC, u0_func, nmod
         x_fine = np.linspace(0, L, 1000)
         u0_minus_ss = u0_func(x_fine) - (bBC + (tBC - bBC) * x_fine / L)
         integrand = u0_minus_ss * np.sin(n * np.pi * x_fine / L)
-        A_n = (2 / L) * np.trapz(integrand, x_fine)
+        A_n = (2 / L) * np.trapezoid(integrand, x_fine)
 
         eigenvalue = (n * np.pi / L) ** 2
         u_transient += A_n * np.sin(n * np.pi * x / L) * np.exp(-mu * eigenvalue * t)
@@ -123,7 +123,7 @@ def modal_unsteady_couette_analytical(x, t, mu, L, bBC, tBC, u0,
     # Compute Fourier coefficients A_n
     def fourier_coeff(n, x):
         integrand = u_transient_0 * np.sin(n * np.pi * x / L)
-        return (2 / L) * np.trapz(integrand, x)
+        return (2 / L) * np.trapezoid(integrand, x)
   
     # Transient solution
     u_transient = np.zeros_like(x)
@@ -169,7 +169,7 @@ def precompute_fourier_coeffs(mu, L, bBC, tBC, u0_func, nmodes=100, quad_points=
     sine_terms = np.sin(n_vals * np.pi * x_fine / L)  # shape (nmodes, quad_points)
 
     # Fourier coefficients A_n
-    integrals = np.trapz(u0_minus_ss * sine_terms, x_fine, axis=1)  # shape (nmodes,)
+    integrals = np.trapezoid(u0_minus_ss * sine_terms, x_fine, axis=1)  # shape (nmodes,)
     A_n = (2 / L) * integrals
 
     # Eigenvalues λ_n
