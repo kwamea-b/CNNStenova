@@ -1,5 +1,5 @@
 # CNNStenova
-  <img src="CNNStenova_logo.png" width="500" align="right">
+  <img src="CNNStenova_logo.png" width="500" align="far right">
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://cnnstenova.streamlit.app/) 
 ![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)
