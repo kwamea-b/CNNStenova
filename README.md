@@ -30,6 +30,10 @@ https://cnnstenova.streamlit.app/
 - Forced Burgers equation CNN kernel learning
 - Rollout prediction and error visualisation
 
+## Funding
+
+Supported by EPSRC reference **EP/W524542/1**.
+
 ## Installation
 
 ```bash
