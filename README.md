@@ -3,6 +3,7 @@
 
 
 CNNStenova is an interactive Streamlit educational and research tool for learning finite-difference stencils and PDE update operators as interpretable convolutional neural-network kernels.
+It reuses the analytical solvers, finite-difference solvers, CNN kernel learners and training routines from the [CNN numerical schemes repository](https://github.com/kwamea-b/CNN_numerical_schemes)
 
 ## Features
 
